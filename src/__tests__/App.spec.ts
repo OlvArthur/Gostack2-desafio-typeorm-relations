@@ -22,7 +22,7 @@ describe('App', () => {
     await connection.runMigrations();
   });
 
-  beforeEach(async () => {
+  afterEach(async () => {
     await connection.query('DELETE FROM orders_products');
     await connection.query('DELETE FROM orders');
     await connection.query('DELETE FROM products');
